@@ -4,20 +4,17 @@ import openai
 from fpdf import FPDF
 import leafmap.foliumap as leafmap
 
-# Configuration de la page
 st.set_page_config(page_title="GeoTrace Afrique", layout="wide")
 st.title("🌍 GeoTrace Afrique – Données Environnementales & Rapports IA")
 
-# Carte interactive centrée sur Pointe-Noire
+# Carte interactive
 st.subheader("🗺️ Visualisation SIG")
 m = leafmap.Map(center=[-4.8, 11.8], zoom=8)
 m.add_basemap("SATELLITE")
 m.to_streamlit(height=500)
 
-# Analyse IA & Rapport PDF
+# Rapport IA
 st.subheader("📄 Générateur de Rapport IA")
-
-# Clé API depuis Streamlit secrets
 openai.api_key = st.secrets["openai_api_key"]
 
 def analyse_environnement(zone, ndvi, pollution):
