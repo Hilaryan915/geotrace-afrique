@@ -5,7 +5,7 @@ from fpdf import FPDF
 import leafmap.foliumap as leafmap
 
 st.set_page_config(page_title="GeoTrace Afrique", layout="wide")
-st.title("🌍 GeoTrace Afrique – Données Environnementales & Rapports IA")
+st.title("🌍 GeoTrace Afrique – Données Environnementales")
 
 # Carte interactive
 st.subheader("🗺️ Visualisation SIG")
